@@ -1,0 +1,151 @@
+footer
+  width: 100%;
+  height: auto;
+  background-color: rgb(173,227,227);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+.footer-right-side, .footer-left-side
+  width: 25%
+
+.footer-left-side
+  display: flex;
+  flex-direction: column;
+  padding: 3vw 0;
+
+.logo-footer
+  text-align: right;
+  margin-right: 30px
+
+.logo-footer svg
+  width 125px
+  height 45px
+
+ul.social-footer,ul.footer-list
+  padding: 0
+
+li.footer-item
+  color #fff
+  margin: 1vw 0;
+
+ul.footer-list a
+  text-decoration: none
+
+ul.footer-list
+  list-style-type none
+  border-right 2px solid white
+  text-align: right;
+  padding-right: 1vw;
+
+ul.social-footer
+  display: flex;
+  flex-direction: row;
+  list-style-type none
+  justify-content: flex-end;
+
+li.social-item
+  margin: 0 .7vw
+
+li.social-item svg
+  width 25px
+  height: 25px
+
+ul.footer-info
+  list-style-type: none;
+  padding-left: 3vw
+  border-left: 2px solid #fff
+
+ul.footer-info li,ul.footer-info li a
+  color #fff
+  text-decoration: none
+
+ul.footer-info li
+  margin: 0.2vw 0
+
+@media (max-width 1280px)
+  .footer-right-side, .footer-left-side
+    width: 28%
+
+@media (max-width 1024px)
+  .footer-right-side, .footer-left-side
+    width: 30%
+
+@media (max-width 768px)
+  .footer-right-side
+    width: 35%
+
+  .footer-left-side
+    width: 30%
+
+
+@media (max-width 640px)
+  footer
+    flex-direction: column;
+
+  .footer-left-side
+    width: 50%
+
+  .footer-right-side
+    width: 100%
+
+  .logo-footer
+    text-align: center;
+    margin 0 auto
+
+  ul.footer-list
+    border-bottom: 2px solid #fff;
+    border-right: none;
+    text-align: center;
+    margin: 0 auto;
+
+  .logo-footer svg
+    width: 250px;
+    height: 100px;
+
+  li.footer-item
+    font-size 22px
+    margin: 2vw 0
+
+  ul.social-footer
+    justify-content: center
+
+  .footer-right-side .logo-footer
+    display: none
+
+  ul.footer-info
+    border-left none
+
+  li.social-item svg
+    width: 35px;
+    height: 35px;
+
+  li.social-item
+    margin: 3vw 3vw
+
+  ul.footer-info li
+    font-size: 20px
+    text-align: center;
+
+@media (max-width: 480px)
+  .logo-footer svg
+    width: 175px;
+    height: 100px;
+
+  ul.footer-info li
+    font-size: 18px
+
+  li.footer-item
+    margin: 4vw 0
+
+  span.button-agalea a
+    padding: 3vw
+
+  .wrapper-button-agalea
+    margin: 10vw 0
+
+@media (max-width: 320px)
+
+  ul.footer-info li
+    font-size: 16px

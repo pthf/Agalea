@@ -1,0 +1,35 @@
+li.box-flex.tip-box.split-wrapper
+  flex 0 1 51%
+
+li.box-flex.tip-box.split-wrapper:nth-child(1),li.box-flex.tip-box.standard-box.big-box
+  height: 70vw
+  overflow: hidden;
+
+li.box-flex.tip-box.split-wrapper .split-box
+  height 35vw
+  margin-bottom: 0
+
+.split-box:last-child
+  margin-top: 1%
+
+
+@media (max-width 768px)
+  li.box-flex.tip-box.standard-box.big-box
+    flex 0 1 48%
+
+  li.box-flex:nth-child(3)
+    flex 0 1 100%
+
+
+@media (max-width 640px)
+  li.box-flex.tip-box.standard-box.big-box,li.box-flex.tip-box.split-wrapper
+    flex 0 1 100%
+
+  li.box-flex.tip-box.split-wrapper .split-box
+    height: 70vw
+
+  li.box-flex.tip-box.split-wrapper:nth-child(1), li.box-flex.tip-box.standard-box.big-box
+    height: 135vw
+
+  li.box-flex.tip-box.standard-box
+    height: 25vw

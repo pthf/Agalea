@@ -1,0 +1,135 @@
+ul.grid-wrapper
+  list-style-type none
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
+  margin: 0
+  padding: 0
+
+li.box-flex
+  display flex
+  flex 0 1 25%
+  height: 25vw
+  margin-top: 0;
+  margin-bottom: 1%;
+  position relative
+  cursor: pointer;
+
+.title-box
+  position absolute
+  top 0
+  right 0
+  width: 100%;
+  height: 100%;
+  text-align center
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition .3s
+
+.title-box-info
+  color white
+  font-size 24px
+  opacity 0
+  letter-spacing 3px
+  transition .3s
+  font-weight 100
+
+li.box-flex.standard-box:hover .title-box
+  background-color rgba(54, 44, 44, 0.4)
+
+li.box-flex.standard-box:hover .title-box-info
+  opacity 1
+
+.title-box:hover
+  background-color rgba(54, 44, 44, 0.4)
+
+.title-box:hover .title-box-info
+  opacity: 1
+
+li.box-flex img
+  margin 0 auto
+
+li.box-flex:nth-child(1)
+  margin-top: 0
+
+li.box-flex:nth-child(1),li.box-flex:nth-child(3)
+  flex 0 1 25%
+
+li.box-flex:nth-child(2)
+  flex 0 1 48%
+
+li.box-flex:nth-child(4),li.box-flex:nth-child(5)
+  flex 0 1 49.5%
+  height: 40vw
+
+li.box-flex:last-child
+  flex 0 1 100%
+  margin-bottom: 1.5%
+
+li.box-flex img
+  margin 0 auto
+  position absolute
+  width 100%
+  height auto
+
+li.box-flex.split-wrapper
+  display: flex;
+  flex-direction: column;
+
+.split-box
+  height: 20vw;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1%;
+  position: relative;
+
+li.box-flex.tip-box.standard-box,li.box-flex.standard-box
+  overflow: hidden;
+
+
+@media(max-width 768px)
+
+  .split-box
+    height 33vw
+    margin-bottom 0%
+
+  li.box-flex:nth-child(1),li.box-flex:nth-child(3)
+    flex 0 1 33%
+
+  li.box-flex:nth-child(1), li.box-flex:nth-child(2)
+    flex 0 1 49.5%
+
+  .title-box
+    background-color rgba(54, 44, 44, 0.4)
+
+  .title-box-info
+    opacity 1
+
+  .wrapper-button-agalea
+    margin: 8vw 0
+
+  span.button-agalea a
+    padding: 3vw
+
+@media(max-width 640px)
+
+  li.box-flex
+    height: 45vw
+
+  li.box-flex:nth-child(1),li.box-flex:nth-child(3)
+    flex 0 1 100%
+
+  li.box-flex:nth-child(2)
+    flex 0 1 100%
+
+  li.box-flex:nth-child(4),li.box-flex:nth-child(5)
+    flex 0 1 49.5%
+    height: 60vw
+
+  .split-box:last-child
+    margin-top 0%
+    margin-bottom 0%

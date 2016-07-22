@@ -1,0 +1,74 @@
+.desc-box
+  width 100%
+  height auto
+  display flex
+  border-bottom 9px solid rgb(255,176,183)
+
+.desc-left-info
+  width 70%
+  height auto
+
+.desc-logo svg
+  width 200px
+  height 100px
+  margin-left 10%
+  padding: 1vw
+
+.desc-right-info
+  width 30%
+  height auto
+  position: relative;
+
+.desc-right-info img
+  width auto
+  height 100%
+  position absolute
+
+
+.desc-text-info
+  width: 60%;
+  height: auto;
+  margin-left: 20%;
+
+.desc-p
+  text-align: justify;
+  color: gray;
+  font-size: 18px;
+
+.wrapper-button-agalea
+  width: 100%;
+  margin: 5vw 0;
+  height: auto;
+  position: relative;
+  text-align: center;
+
+span.button-agalea a
+  padding: 1vw;
+  border: 2px solid gray;
+  color: gray;
+  cursor: pointer;
+  transition: .3s
+  text-decoration none
+
+span.button-agalea a:hover
+  color: rgb(255,176,183)
+  border: 2px solid rgb(255,176,183)
+  font-size: 14px
+
+@media (max-width 768px)
+
+  .desc-right-info
+    display none
+
+  .desc-left-info
+    width 100%
+
+  .desc-logo
+    text-align: center;
+
+  .desc-logo svg
+    margin 0
+
+  .desc-text-info
+    width 85%
+    margin 0 auto
