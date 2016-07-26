@@ -90,6 +90,88 @@ li.box-flex.split-wrapper
 li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   overflow: hidden;
 
+.background-blur
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  z-index: -9;
+  opacity: 0
+
+.close-filter
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 7
+
+
+.swiper-pagination.pagination-modal
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1vw 0
+
+.swiper-pagination.pagination-modal span.swiper-pagination-switch.swiper-visible-switch.swiper-active-switch
+  background-color: gray
+
+
+.swiper-pagination.pagination-modal .swiper-pagination-switch
+  border: 1px solid gray;
+
+
+.item-wrapper
+  position: relative;
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  background: white;
+  padding: 1vw 3vw 2vw 3vw
+  z-index: 9
+  border-radius: 5px
+  overflow: auto;
+  margin-top: 10%
+  margin-bottom: 10%
+  margin-right: 10%
+  margin-left: 10%
+
+
+.close-icon
+  position: relative;
+  font-size: 32px;
+  color: grey;
+  font-weight: 100;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  text-align: right;
+
+.title-item
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding: 1vw 0;
+  font-size: 24px;
+  color: gray;
+
+.text-item-info
+  color: gray;
+  font-weight: 100;
+
+.swiper-container.swiper-modal .swiper-wrapper .swiper-slide img
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+
+.swiper-container.swiper-modal
+  height: 20vw
 
 @media(max-width 768px)
 
@@ -115,6 +197,14 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   span.button-agalea a
     padding: 3vw
 
+  .item-wrapper
+    width: 450px;
+    height: auto;
+    min-height: 450px;
+
+  .swiper-container.swiper-modal
+    height: 35vw
+
 @media(max-width 640px)
 
   li.box-flex
@@ -133,3 +223,34 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   .split-box:last-child
     margin-top 0%
     margin-bottom 0%
+
+  .title-box-info
+    font-size: 22px
+
+  .item-wrapper
+    width: 85%;
+
+  .swiper-container.swiper-modal
+    height: 45vw
+
+@media(max-width 480px)
+  .title-box-info
+    font-size: 18px
+
+  .item-wrapper
+    margin-top: 10vw;
+    width: 90%;
+
+  .swiper-container.swiper-modal
+    height: 55vw
+
+@media(max-width 320px)
+  .title-box-info
+    font-size: 16px
+
+  .item-wrapper
+    width: 90%;
+    margin-top: 25vw;
+
+  .swiper-container.swiper-modal
+    height: 55vw

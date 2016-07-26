@@ -4,6 +4,10 @@
 
 		.controller('homeSliderController', ['$scope', function($scope){
 
+				$('.logo-header svg').on('click', function(){
+					$('li.menu-item a').removeClass('selected');
+				})
+
 		}])
 
 		//resaltar la opcion del menu resaltado

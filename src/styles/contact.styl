@@ -45,7 +45,7 @@ input[type="text"], input[type="tel"], textarea
   border: 1px solid gray;
   margin: .3vw 0;
   resize: none;
-  padding: .5vw;
+  padding: 1vw;
   border-radius: 0
   -webkit-appearance: none;
 
@@ -59,9 +59,17 @@ input.hvr-grow
   position: relative;
   border none
   float right
-  margin-right -5%
+  margin-right -8.3%
   border-radius: 0
   -webkit-appearance: none;
+  cursor: pointer;
+  transition: .3s
+  font-size: 16px
+
+input.hvr-grow:hover
+  background: #f1a9b0;
+  color: black
+
 
 @media (max-width 1024px)
 
@@ -75,7 +83,7 @@ input.hvr-grow
     height 40vw
 
   input.hvr-grow
-    margin-right: -3.5%
+    margin-right: -5%
 
 @media (max-width 768px)
   li.address-item
