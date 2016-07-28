@@ -3,7 +3,8 @@
 	var app = angular.module('agaleaSite', [
     	'ngRoute',
     	'agaleaSite.controllers',
-    	'agaleaSite.directives'
+    	'agaleaSite.directives',
+			'ngMap'
   	]);
 
 	app.config(['$routeProvider', function ($routeProvider) {
@@ -18,6 +19,15 @@
 			})
 			.when('/productos', {
 				templateUrl: 'views/productos.html',
+			})
+			.when('/productos/womens', {
+				templateUrl: 'views/productos-mujeres.html',
+			})
+			.when('/productos/men', {
+				templateUrl: 'views/productos-hombres.html',
+			})
+			.when('/productos/kids', {
+				templateUrl: 'views/productos-ninos.html',
 			})
 			.when('/tips', {
 				templateUrl: 'views/tips.html',

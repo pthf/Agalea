@@ -2,6 +2,7 @@
 
 	angular.module('agaleaSite.directives', [])
 
+		// Header
 		.directive('headertop', function(){
 			return {
 				restrict: 'E',
@@ -38,6 +39,7 @@
 			};
 		})
 
+		// Footer
 		.directive('footerBottom', function(){
 			return {
 				restrict: 'E',
@@ -47,6 +49,7 @@
 			};
 		})
 
+		// Main Slider
 		.directive('swiperSlider', function(){
 			return {
 	      restrict: 'E',
@@ -69,6 +72,7 @@
 			};
 		})
 
+		// Modal and background blur
 		.directive('backgroundBlur', function(){
 			return {
 	      restrict: 'E',
@@ -91,6 +95,7 @@
 			};
 		})
 
+		//Section description home
 		.directive('descBox', function(){
 			return {
 				restrict: 'E',
@@ -103,6 +108,7 @@
 			};
 		})
 
+		// Grid products
 		.directive('gridBoxes', function(){
 			return {
 				restrict: 'E',
@@ -116,10 +122,10 @@
 						}, 150);
 						$('html').css({"overflow-y" : "hidden"});
 						if ($(window).width() <= 768) {
-						 $('html').css({
-							 "overflow-y" : "hidden",
-							 "position" : "fixed"
-						 })
+							$('html,body').css({
+								"overflow-y" : "hidden",
+								"position" : "fixed"
+							})
 						}
 					});
 
@@ -128,7 +134,7 @@
 						setTimeout(function(){
 						  $('.background-blur').css('z-index','-9');
 						},235);
-						$('html').css({
+						$('html,body').css({
 							"overflow-y" : "scroll",
 							"position" : "static"
 						})
@@ -138,12 +144,13 @@
 			};
 		})
 
+		//Section "/Nosotros"
 		.directive('nosotrosContent', function(){
 			return {
 				restrict: 'E',
 				templateUrl: './partials/nosotros-content.html',
 				controller: function($document){
-					$('li.menu-item,span.button-agalea').on('click', function(e){
+					$('span.button-agalea').on('click', function(e){
 						$('html, body').animate({
 								scrollTop: $("body").offset().top
 						}, 0);
@@ -152,6 +159,7 @@
 			};
 		})
 
+		//Section Menu "Productos"
 		.directive('productsMenu', function(){
 			return {
 				restrict: 'E',
@@ -162,19 +170,20 @@
 			};
 		})
 
-		.directive('gridTips', function(){
+		//Section "Hombres"
+		.directive('productosHombres', function(){
 			return {
 				restrict: 'E',
-				templateUrl: './partials/grid-tips.html',
+				templateUrl: './partials/productos-hombres.html',
 				controller: function($document){
 					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
 					  $('.background-blur').css('z-index','9');
 						$('html').css('overflow','hidden');
 						if ($(window).width() <= 768) {
-		                 $('html').css({
-		                   "overflow-y" : "hidden",
-		                   "position" : "fixed"
-		                 })
+	             $('html,body').css({
+	               "overflow-y" : "hidden",
+								 "position" : "fixed"
+	             })
 		        }
 						setTimeout(function(){
 						  $('.background-blur').css('opacity','1');
@@ -187,9 +196,9 @@
 						  $('.background-blur').css('z-index','-9');
 						},235);
 
-             $('html').css({
+             $('html,body').css({
                "overflow-y" : "scroll",
-               "position" : "static"
+								"position" : "static"
              })
 
 					});
@@ -197,6 +206,115 @@
 			};
 		})
 
+		//Section "Mujeres"
+		.directive('productosMujeres', function(){
+			return {
+				restrict: 'E',
+				templateUrl: './partials/productos-mujeres.html',
+				controller: function($document){
+					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
+					  $('.background-blur').css('z-index','9');
+						$('html').css('overflow','hidden');
+						if ($(window).width() <= 768) {
+	             $('html,body').css({
+	               "overflow-y" : "hidden",
+								 "position" : "fixed"
+	             })
+		        }
+						setTimeout(function(){
+						  $('.background-blur').css('opacity','1');
+						}, 150);
+					});
+
+					$( 'span.close-icon-button,.close-filter' ).click(function() {
+					  $('.background-blur').css('opacity','0');
+						setTimeout(function(){
+						  $('.background-blur').css('z-index','-9');
+						},235);
+
+             $('html,body').css({
+               "overflow-y" : "scroll",
+								"position" : "static"
+             })
+
+					});
+				}
+			};
+		})
+
+		//Section "Niños"
+		.directive('productosNinos', function(){
+			return {
+				restrict: 'E',
+				templateUrl: './partials/productos-ninos.html',
+				controller: function($document){
+					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
+					  $('.background-blur').css('z-index','9');
+						$('html').css('overflow','hidden');
+						if ($(window).width() <= 768) {
+	             $('html,body').css({
+	               "overflow-y" : "hidden",
+								 "position" : "fixed"
+	             })
+		        }
+						setTimeout(function(){
+						  $('.background-blur').css('opacity','1');
+						}, 150);
+					});
+
+					$( 'span.close-icon-button,.close-filter' ).click(function() {
+					  $('.background-blur').css('opacity','0');
+						setTimeout(function(){
+						  $('.background-blur').css('z-index','-9');
+						},235);
+
+             $('html,body').css({
+               "overflow-y" : "scroll",
+								"position" : "static"
+             })
+
+					});
+				}
+			};
+		})
+
+		//Grid section "Tips"
+		.directive('gridTips', function(){
+			return {
+				restrict: 'E',
+				templateUrl: './partials/grid-tips.html',
+				controller: function($document){
+					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
+					  $('.background-blur').css('z-index','9');
+						$('html').css('overflow','hidden');
+						if ($(window).width() <= 768) {
+	             $('html,body').css({
+	               "overflow-y" : "hidden",
+								 "position" : "fixed"
+	             })
+		        }
+						setTimeout(function(){
+						  $('.background-blur').css('opacity','1');
+						}, 150);
+					});
+
+					$( 'span.close-icon-button,.close-filter' ).click(function() {
+					  $('.background-blur').css('opacity','0');
+						setTimeout(function(){
+						  $('.background-blur').css('z-index','-9');
+						},235);
+
+             $('html,body').css({
+               "overflow-y" : "scroll",
+								"position" : "static"
+             })
+
+					});
+				}
+			};
+		})
+
+		//Contact Form
 		.directive('contactForm', function(){
 			return {
 				restrict: 'E',
@@ -206,34 +324,12 @@
 			};
 		})
 
+		//Google Maps Settings
 		.directive('googleMap', function(){
 			return {
 				restrict: 'E',
 				templateUrl: './partials/google-map.html',
 				controller: function($document){
-
-					var myCenter=new google.maps.LatLng(21.171822,-101.7333769);
-
-					function initialize() {
-					  var mapProp = {
-					    center: myCenter,
-					    zoom:15,
-					    scrollwheel: false,
-					    navigationControl: false,
-					    mapTypeControl: false,
-					    scaleControl: false,
-					    draggable: false,
-					    mapTypeId: google.maps.MapTypeId.ROADMAP
-					  };
-
-					  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-					  var marker=new google.maps.Marker({
-					    position:myCenter,
-					  });
-					  marker.setMap(map);
-					}
-					google.maps.event.addDomListener(window, 'load', initialize);
 
 				}
 			};

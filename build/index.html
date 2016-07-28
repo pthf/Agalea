@@ -6,25 +6,25 @@
     <title>Agalea</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+    <body>
+      <headertop></headertop>
+
+        <div class="loadedView" ng-view></div>
+
+      <footer-bottom></footer-bottom>
 
 
-    <headertop></headertop>
+      <background-blur></background-blur>
 
-    <div class="loadedView" ng-view></div>
+      <!-- JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="js/lib/angular.min.js"></script>
+      <script src="js/lib/angular-route.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/controllers.js"></script>
+      <script src="js/directives.js"></script>
+      <script src="js/lib/ng-map.min.js"></script>
+      <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDYC7ZQMvFXYMjseH9iR1P30rqKBo7SOFc"></script>
 
-    <footer-bottom></footer-bottom>
-
-    <background-blur></background-blur>
-
-    <!-- Angular.js  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/lib/angular.min.js"></script>
-    <script src="js/lib/angular-route.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/directives.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDYC7ZQMvFXYMjseH9iR1P30rqKBo7SOFc"></script>
-
-  </body>
+    </body>
 </html>

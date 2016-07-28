@@ -97,12 +97,11 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   background-color: rgba(0,0,0,.5);
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   transition: .5s;
   z-index: -9;
   opacity: 0
+  overflow: scroll;
 
 .close-filter
   position: absolute;
@@ -128,8 +127,8 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
 
 
 .item-wrapper
-  position: relative;
-  width: 500px;
+  position: absolute;
+  width: 30%;
   height: auto;
   min-height: 500px;
   background: white;
@@ -137,11 +136,8 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   z-index: 9
   border-radius: 5px
   overflow: auto;
-  margin-top: 10%
-  margin-bottom: 10%
-  margin-right: 10%
-  margin-left: 10%
-
+  left: 35%;
+  top: 3%;
 
 .close-icon
   position: relative;
@@ -173,6 +169,13 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
 .swiper-container.swiper-modal
   height: 20vw
 
+@media(max-width 1024px)
+
+  .item-wrapper
+    width: 40%;
+    left: 30%;
+    top: 4%;
+
 @media(max-width 768px)
 
   .split-box
@@ -197,13 +200,13 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   span.button-agalea a
     padding: 3vw
 
-  .item-wrapper
-    width: 450px;
-    height: auto;
-    min-height: 450px;
-
   .swiper-container.swiper-modal
     height: 35vw
+
+  .item-wrapper
+    width: 55%;
+    left: 22.5%;
+    top: 4%;
 
 @media(max-width 640px)
 
@@ -227,30 +230,36 @@ li.box-flex.tip-box.standard-box,li.box-flex.standard-box
   .title-box-info
     font-size: 22px
 
-  .item-wrapper
-    width: 85%;
-
   .swiper-container.swiper-modal
     height: 45vw
+
+  .item-wrapper
+    width: 65%;
+    left: 17.5%;
+    top: 2%;
 
 @media(max-width 480px)
   .title-box-info
     font-size: 18px
 
-  .item-wrapper
-    margin-top: 10vw;
-    width: 90%;
-
   .swiper-container.swiper-modal
     height: 55vw
+
+  .item-wrapper
+    width: 75%;
+    left: 12.5%;
+    top: 1%;
+    margin-bottom: 5%
+
 
 @media(max-width 320px)
   .title-box-info
     font-size: 16px
 
-  .item-wrapper
-    width: 90%;
-    margin-top: 25vw;
-
   .swiper-container.swiper-modal
     height: 55vw
+
+  .item-wrapper
+    width: 85%;
+    left: 4.5%;
+    top: 1%;
