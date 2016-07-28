@@ -1,6 +1,7 @@
 .desc-box
   width 100%
   height auto
+  position: relative;
   display flex
   border-bottom 9px solid rgb(255,176,183)
 
@@ -16,8 +17,12 @@
 
 .desc-right-info
   width 30%
-  height auto
-  position: relative;
+  height 100%
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url('../img/bg.svg');
+  background-size: cover;
 
 .desc-right-info img
   width auto

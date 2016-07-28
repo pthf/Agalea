@@ -45,6 +45,11 @@
 				restrict: 'E',
 				templateUrl: './partials/footer-bottom.html',
 				controller: function($document){
+					$('li.footer-item').on('click', function(e){
+						$('html, body').animate({
+								scrollTop: $("header").offset().top
+						}, 0);
+					})
 				}
 			};
 		})
