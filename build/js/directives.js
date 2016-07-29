@@ -8,33 +8,12 @@
 				restrict: 'E',
 				templateUrl: './partials/header-top.html',
 				controller: function($document){
-					//responsive header
-					var heightHeader = $('header').height();
-
-					if ($(window).width() <= 768){
-						$('.margin-responsive').css('height',heightHeader + 'px');
-					}
-					else{
-						$('.margin-responsive').css('height','0');
-					}
-
-					$(window).resize(function(){
-						var heightHeader = $('header').height();
-						if ($(window).width() <= 768){
-							$('.margin-responsive').css('height',heightHeader + 'px');
-						}
-						else{
-								$('.margin-responsive').css('height','0');
-						}
-					});
-
 					$('li.menu-item,span.button-agalea').on('click', function(e){
 						$('html, body').animate({
 								scrollTop: $("body").offset().top
 						}, 0);
 					})
-
-
+				
 				}
 			};
 		})
@@ -170,7 +149,6 @@
 				restrict: 'E',
 				templateUrl: './partials/products-menu.html',
 				controller: function($document){
-
 				}
 			};
 		})

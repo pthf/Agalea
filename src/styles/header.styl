@@ -9,6 +9,7 @@ header
   align-items center
   border-bottom 2px solid gray
   background-color: #fff
+  height: 10vw
 
 div.logo-header
   width 100%
@@ -67,12 +68,19 @@ li.menu-item a:hover
   li.menu-item a
     font-size 16px
 
+@media(max-width 1280px)
+  header
+    height: 12vw
+
 @media(max-width 1024px)
   li.menu-item a
     font-size 14px
 
   ul.menu-list
     width 45%
+
+  header
+    height: 14vw
 
 @media(max-width 768px)
   ul.menu-list
@@ -93,9 +101,15 @@ li.menu-item a:hover
     padding: 0
     margin-top 3vw
 
+  header,.margin-responsive
+    height: 18vw
+
 @media(max-width 640px)
   ul.menu-list
     width 65%
+
+  header,.margin-responsive
+    height: 22vw
 
 @media(max-width 480px)
   ul.menu-list
@@ -104,6 +118,12 @@ li.menu-item a:hover
   .logo-header img
     padding: 5vw 0 0vw 0
 
+  header,.margin-responsive
+    height: 30vw
+
 @media(max-width 320px)
   ul.menu-list
     width 95%
+
+  header,.margin-responsive
+    height: 33vw
