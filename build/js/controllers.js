@@ -3,11 +3,9 @@
 	angular.module('agaleaSite.controllers', [])
 
 		.controller('homeSliderController', ['$scope', function($scope){
-
 				$('.logo-header svg').on('click', function(){
 					$('li.menu-item a').removeClass('selected');
 				})
-
 		}])
 
 		//resaltar la opcion del menu resaltado
@@ -24,14 +22,5 @@
 				$scope.itemselected = item;
 			}
 		}])
-
-		.controller('MyController', function(NgMap) {
-		  NgMap.getMap().then(function(map) {
-		    console.log(map.getCenter());
-		    console.log('markers', map.markers);
-		    console.log('shapes', map.shapes);
-		  });
-		});
-
 
 })();

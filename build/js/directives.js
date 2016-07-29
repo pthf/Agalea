@@ -13,7 +13,7 @@
 								scrollTop: $("body").offset().top
 						}, 0);
 					})
-				
+
 				}
 			};
 		})
