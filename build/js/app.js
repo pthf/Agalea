@@ -29,6 +29,9 @@
 			.when('/productos/kids', {
 				templateUrl: 'views/productos-ninos.html',
 			})
+			.when('/item', {
+				templateUrl: 'views/product-view-item.html',
+			})
 			.when('/tips', {
 				templateUrl: 'views/tips.html',
 			})
