@@ -8,11 +8,6 @@
 				restrict: 'E',
 				templateUrl: './partials/header-top.html',
 				controller: function($document){
-					$('li.menu-item,span.button-agalea').on('click', function(e){
-						$('html, body').animate({
-								scrollTop: $("body").offset().top
-						}, 0);
-					})
 
 				}
 			};
@@ -24,11 +19,7 @@
 				restrict: 'E',
 				templateUrl: './partials/footer-bottom.html',
 				controller: function($document){
-					$('li.footer-item').on('click', function(e){
-						$('html, body').animate({
-								scrollTop: $("header").offset().top
-						}, 0);
-					})
+
 				}
 			};
 		})
@@ -69,6 +60,19 @@
 		        // speed:500
 		      });
 
+					$( 'span.close-icon-button,.close-filter' ).click(function() {
+					  $('.background-blur').css('opacity','0');
+						setTimeout(function(){
+						  $('.background-blur').css('z-index','-9');
+						},235);
+
+             $('html,body').css({
+               "overflow-y" : "scroll",
+								"position" : "static"
+             })
+
+					});
+
 				}
 			};
 		})
@@ -79,9 +83,7 @@
 				restrict: 'E',
 				templateUrl: './partials/desc-box.html',
 				controller: function($document){
-					$('span.button-agalea').on('click', function(e){
-						 $(window).scrollTop(0);
-					})
+
 				}
 			};
 		})
@@ -93,31 +95,6 @@
 				templateUrl: './partials/grid-boxes.html',
 				controller: function($document){
 
-					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
-					  $('.background-blur').css('z-index','9');
-						setTimeout(function(){
-						  $('.background-blur').css('opacity','1');
-						}, 150);
-						$('html').css({"overflow-y" : "hidden"});
-						if ($(window).width() <= 768) {
-							$('html,body').css({
-								"overflow-y" : "hidden",
-								"position" : "fixed"
-							})
-						}
-					});
-
-					$( 'span.close-icon-button,.close-filter' ).click(function() {
-					  $('.background-blur').css('opacity','0');
-						setTimeout(function(){
-						  $('.background-blur').css('z-index','-9');
-						},235);
-						$('html,body').css({
-							"overflow-y" : "scroll",
-							"position" : "static"
-						})
-					});
-
 				}
 			};
 		})
@@ -128,11 +105,7 @@
 				restrict: 'E',
 				templateUrl: './partials/nosotros-content.html',
 				controller: function($document){
-					$('span.button-agalea').on('click', function(e){
-						$('html, body').animate({
-								scrollTop: $("body").offset().top
-						}, 0);
-					})
+
 				}
 			};
 		})
@@ -143,6 +116,7 @@
 				restrict: 'E',
 				templateUrl: './partials/products-menu.html',
 				controller: function($document){
+					
 				}
 			};
 		})
@@ -153,32 +127,7 @@
 				restrict: 'E',
 				templateUrl: './partials/productos-hombres.html',
 				controller: function($document){
-					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
-					  $('.background-blur').css('z-index','9');
-						$('html').css('overflow','hidden');
-						if ($(window).width() <= 768) {
-	             $('html,body').css({
-	               "overflow-y" : "hidden",
-								 "position" : "fixed"
-	             })
-		        }
-						setTimeout(function(){
-						  $('.background-blur').css('opacity','1');
-						}, 150);
-					});
 
-					$( 'span.close-icon-button,.close-filter' ).click(function() {
-					  $('.background-blur').css('opacity','0');
-						setTimeout(function(){
-						  $('.background-blur').css('z-index','-9');
-						},235);
-
-             $('html,body').css({
-               "overflow-y" : "scroll",
-								"position" : "static"
-             })
-
-					});
 				}
 			};
 		})
@@ -189,32 +138,7 @@
 				restrict: 'E',
 				templateUrl: './partials/productos-mujeres.html',
 				controller: function($document){
-					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
-					  $('.background-blur').css('z-index','9');
-						$('html').css('overflow','hidden');
-						if ($(window).width() <= 768) {
-	             $('html,body').css({
-	               "overflow-y" : "hidden",
-								 "position" : "fixed"
-	             })
-		        }
-						setTimeout(function(){
-						  $('.background-blur').css('opacity','1');
-						}, 150);
-					});
 
-					$( 'span.close-icon-button,.close-filter' ).click(function() {
-					  $('.background-blur').css('opacity','0');
-						setTimeout(function(){
-						  $('.background-blur').css('z-index','-9');
-						},235);
-
-             $('html,body').css({
-               "overflow-y" : "scroll",
-								"position" : "static"
-             })
-
-					});
 				}
 			};
 		})
@@ -225,32 +149,7 @@
 				restrict: 'E',
 				templateUrl: './partials/productos-ninos.html',
 				controller: function($document){
-					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
-					  $('.background-blur').css('z-index','9');
-						$('html').css('overflow','hidden');
-						if ($(window).width() <= 768) {
-	             $('html,body').css({
-	               "overflow-y" : "hidden",
-								 "position" : "fixed"
-	             })
-		        }
-						setTimeout(function(){
-						  $('.background-blur').css('opacity','1');
-						}, 150);
-					});
 
-					$( 'span.close-icon-button,.close-filter' ).click(function() {
-					  $('.background-blur').css('opacity','0');
-						setTimeout(function(){
-						  $('.background-blur').css('z-index','-9');
-						},235);
-
-             $('html,body').css({
-               "overflow-y" : "scroll",
-								"position" : "static"
-             })
-
-					});
 				}
 			};
 		})
@@ -261,7 +160,7 @@
 				restrict: 'E',
 				templateUrl: './partials/grid-tips.html',
 				controller: function($document){
-					$( 'li.box-flex.standard-box,.split-box' ).click(function() {
+					$( 'li.box-flex' ).click(function() {
 					  $('.background-blur').css('z-index','9');
 						$('html').css('overflow','hidden');
 						if ($(window).width() <= 768) {
@@ -273,19 +172,6 @@
 						setTimeout(function(){
 						  $('.background-blur').css('opacity','1');
 						}, 150);
-					});
--
-					$( 'span.close-icon-button,.close-filter' ).click(function() {
-					  $('.background-blur').css('opacity','0');
-						setTimeout(function(){
-						  $('.background-blur').css('z-index','-9');
-						},235);
-
-             $('html,body').css({
-               "overflow-y" : "scroll",
-								"position" : "static"
-             })
-
 					});
 				}
 			};
@@ -311,7 +197,7 @@
 				}
 			};
 		})
-
+			//Vista de un solo producto
 		.directive('productItem', function(){
 			return {
 				restrict: 'E',

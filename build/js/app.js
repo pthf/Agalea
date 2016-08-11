@@ -7,6 +7,13 @@
 			'ngMap'
   	]);
 
+	app.run(function($rootScope, $anchorScroll){
+		//Scroll hacia arriba cada vez que cambie de ruta
+		$rootScope.$on("$routeChangeSuccess", function (event, currentRoute, previousRoute) {
+		    window.scrollTo(0, 0);
+		});
+	})
+
 	app.config(['$routeProvider', function ($routeProvider) {
 
 		$routeProvider
@@ -17,17 +24,11 @@
 			.when('/nosotros', {
 				templateUrl: 'views/nosotros.html',
 			})
-			.when('/productos', {
+			.when('/productos/:categoria', {
 				templateUrl: 'views/productos.html',
 			})
-			.when('/productos/womens', {
-				templateUrl: 'views/productos-mujeres.html',
-			})
-			.when('/productos/men', {
-				templateUrl: 'views/productos-hombres.html',
-			})
-			.when('/productos/kids', {
-				templateUrl: 'views/productos-ninos.html',
+			.when('/productos/', {
+				templateUrl: 'views/productos.html',
 			})
 			.when('/item', {
 				templateUrl: 'views/product-view-item.html',

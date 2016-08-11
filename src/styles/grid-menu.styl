@@ -1,0 +1,290 @@
+ul.grid-wrapper
+  list-style-type none
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%
+  margin: 0 auto
+  padding: 0
+
+li.box-flex
+  display flex
+  flex 0 1 25%
+  height: 20vw
+  margin-top: 0;
+  margin-bottom: 1%;
+  position relative
+  cursor: pointer;
+
+.title-box
+  position absolute
+  top 0
+  right 0
+  width: 100%;
+  height: 100%;
+  text-align center
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition .3s
+
+.selected-opt
+  background-color: red;
+
+.title-box-info
+  color white
+  font-size 24px
+  opacity 0
+  letter-spacing 3px
+  transition .3s
+  font-weight 100
+
+li.box-flex.standard-box:hover .title-box
+  background-color rgba(54, 44, 44, 0.4)
+
+li.box-flex.standard-box:hover .title-box-info
+  opacity 1
+
+.title-box:hover
+  background-color rgba(54, 44, 44, 0.4)
+
+.title-box:hover .title-box-info
+  opacity: 1
+
+li.box-flex img
+  margin 0 auto
+
+li.box-flex:nth-child(1)
+  margin-top: 0
+
+li.box-flex:nth-child(1),li.box-flex:nth-child(3)
+  flex 0 1 25%
+
+li.box-flex:nth-child(2)
+  flex 0 1 48%
+
+li.box-flex:nth-child(4),li.box-flex:nth-child(5)
+  flex 0 1 49.5%
+  height: 40vw
+
+li.box-flex:last-child
+  flex 0 1 100%
+  margin-bottom: 1.5%
+
+li.box-flex img
+  margin 0 auto
+  position absolute
+  width 100%
+  height auto
+
+li.box-flex.split-wrapper
+  display: flex;
+  flex-direction: column;
+
+.split-box
+  height: 20vw;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1%;
+  position: relative;
+
+li.box-flex.tip-box.standard-box,li.box-flex.standard-box
+  overflow: hidden;
+
+.background-blur
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  display: block;
+  transition: .5s;
+  z-index: -9;
+  opacity: 0
+  overflow: scroll;
+
+.close-filter
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 7
+
+
+.swiper-pagination.pagination-modal
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1vw 0
+
+.swiper-pagination.pagination-modal span.swiper-pagination-switch.swiper-visible-switch.swiper-active-switch
+  background-color: gray
+
+
+.swiper-pagination.pagination-modal .swiper-pagination-switch
+  border: 1px solid gray;
+
+
+.item-wrapper
+  position: absolute;
+  width: 30%;
+  height: auto;
+  min-height: 500px;
+  background: white;
+  padding: 1vw 3vw 2vw 3vw
+  z-index: 9
+  border-radius: 5px
+  left: 35%;
+  top: 3%;
+
+.close-icon
+  position: relative;
+  font-size: 26px;
+  color: grey;
+  font-weight: 100;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  text-align: right;
+
+.title-item
+  width: 100%;
+  text-align: center;
+  height: auto;
+  padding: 1vw 0;
+  font-size: 24px;
+  color: gray;
+
+.text-item-info
+  color: gray;
+  font-weight: 100;
+
+.swiper-container.swiper-modal .swiper-wrapper .swiper-slide img
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+
+.swiper-container.swiper-modal
+  height: 20vw
+
+.swiper-slide
+  position: relative;
+
+span.foot-img
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: gray
+  opacity: .6
+
+.menu-products
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+
+.menu-products ul
+  padding: 2vw 0
+
+.menu-products ul li a.selectedFilter
+  color pink
+
+@media(max-width 1024px)
+
+  .item-wrapper
+    width: 40%;
+    left: 30%;
+    top: 4%;
+
+@media(max-width 768px)
+
+  .split-box
+    height 33vw
+    margin-bottom 0%
+
+  li.box-flex:nth-child(1),li.box-flex:nth-child(3)
+    flex 0 1 33%
+
+  li.box-flex:nth-child(1), li.box-flex:nth-child(2)
+    flex 0 1 49.5%
+
+  .title-box
+    background-color rgba(54, 44, 44, 0.4)
+
+  .title-box-info
+    opacity 1
+
+  .wrapper-button-agalea
+    margin: 8vw 0
+
+  span.button-agalea a
+    padding: 3vw
+
+  .swiper-container.swiper-modal
+    height: 35vw
+
+  .item-wrapper
+    width: 55%;
+    left: 22.5%;
+    top: 4%;
+
+  ul.grid-wrapper
+    width: 100%
+@media(max-width 640px)
+
+  li.box-flex
+    height: 45vw
+
+  li.box-flex:nth-child(1),li.box-flex:nth-child(3)
+    flex 0 1 100%
+
+  li.box-flex:nth-child(2)
+    flex 0 1 100%
+
+  li.box-flex:nth-child(4),li.box-flex:nth-child(5)
+    flex 0 1 49.5%
+    height: 60vw
+
+  .split-box:last-child
+    margin-top 0%
+    margin-bottom 0%
+
+  .title-box-info
+    font-size: 22px
+
+  .swiper-container.swiper-modal
+    height: 45vw
+
+  .item-wrapper
+    width: 65%;
+    left: 12.5%;
+    top: 2%;
+
+@media(max-width 480px)
+  .title-box-info
+    font-size: 18px
+
+  .swiper-container.swiper-modal
+    height: 55vw
+
+  .item-wrapper
+    width: 75%;
+    left: 10%;
+    top: 2%;
+    margin-bottom: 5%
+
+
+@media(max-width 320px)
+  .title-box-info
+    font-size: 16px
+
+  .swiper-container.swiper-modal
+    height: 55vw
+
+  .item-wrapper
+    width: 85%;
+    left: 4.5%;
+    top: 1%;
