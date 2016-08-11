@@ -4,6 +4,7 @@
     	'ngRoute',
     	'agaleaSite.controllers',
     	'agaleaSite.directives',
+			'agaleaSite.services',
 			'ngMap'
   	]);
 

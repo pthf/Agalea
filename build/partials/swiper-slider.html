@@ -7,19 +7,9 @@
   <div class="swiper-container swiper-home">
     <div class="swiper-wrapper">
 
-
-      <div class="swiper-slide">
-        <img src="img/banner1-01.png">
+      <div class="swiper-slide" ng-repeat="(key, data) in listSliderHome" >
+        <img src="./admin/src/images/homeSlider/{{data.bannerImageName}}">
       </div>
-
-      <div class="swiper-slide">
-        <img src="img/banner1-01.png">
-      </div>
-
-      <div class="swiper-slide">
-        <img src="img/banner1-01.png">
-      </div>
-
 
     </div>
   </div>

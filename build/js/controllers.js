@@ -23,4 +23,12 @@
 			}
 		}])
 
+		.controller('getDataSiteController', ['$scope', 'agaleaService',  function($scope, agaleaService){
+			$scope.loadingSliderHome = false;
+			agaleaService.getImagesSliderHome().then(function(data){
+				$scope.listSliderHome = data;
+				$scope.loadingSliderHome = true;
+			});
+		}]);
+
 })();
