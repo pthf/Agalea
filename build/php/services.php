@@ -66,6 +66,25 @@
       }
       print_r(json_encode($listSubCategory));
     }
+    private function getProductsByFilters(){
+      $category = $_GET['category'];
+      $subcategory = $_GET['subcategory'];
+      $query = "SELECT * FROM product
+      INNER JOIN category ON category.idCategory = product.idCategory
+      INNER JOIN subcategory ON   subcategory.idSubcategory = product.idSubcategory
+      WHERE category.categoryUrl = '$category' AND subcategory.subcategoryUrl = '$subcategory'";
+      $result = mysql_query($query, $this->connection()) or die(mysql_error());
+      $listProducts= array();
+      while($line = mysql_fetch_array($result)){
+        $listProducts[] = array(
+          'idProduct' => $line['idProduct'],
+          'productName' => $line['productName'],
+          'productImage' => $line['productImage'],
+          'subcategoryDescription' => $line['subcategoryDescription']
+        );
+      }
+      print_r(json_encode($listProducts));
+    }
   }
   $nameObject = $_GET['namefunction'];
   new Services($nameObject);

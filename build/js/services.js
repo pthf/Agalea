@@ -48,12 +48,21 @@
         return deferred.promise;
     }
 
+    function getProductsByFilters(category, subcategory){
+      var deferred = $q.defer();
+      $http.get('./php/services.php?namefunction=getProductsByFilters&category='+category+'&subcategory='+subcategory)
+        .success(function (data) {
+            deferred.resolve(data);
+        });
+        return deferred.promise;
+    }
     return {
       getImagesSliderHome: getImagesSliderHome,
       getSubcategoriesHome: getSubcategoriesHome,
       getCategoriesProducts: getCategoriesProducts,
       getByCategory: getByCategory,
-      getAllCategories: getAllCategories
+      getAllCategories: getAllCategories,
+      getProductsByFilters: getProductsByFilters
     }
 
   }]);

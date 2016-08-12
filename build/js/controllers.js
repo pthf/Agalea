@@ -48,18 +48,23 @@
 
 		.controller('showByFiltersController', ['$scope', 'agaleaService', '$routeParams', function($scope, agaleaService, $routeParams){
 			var category = $routeParams.categoria;
-			$scope.loadDataFilters = false;
 			if(category != null){
 				agaleaService.getByCategory(category).then(function(data){
 					$scope.listCategories = data;
-					$scope.loadDataFilters = true;
 				});
 			}else{
 				agaleaService.getAllCategories().then(function(data){
 					$scope.listCategories = data;
-					$scope.loadDataFilters = true;
 				});
 			}
+		}])
+
+		.controller('showProductsController', ['$scope', 'agaleaService', '$routeParams', function($scope, agaleaService, $routeParams){
+			var category = $routeParams.categoria;
+			var subcategory = $routeParams.subcategoria;
+			agaleaService.getProductsByFilters(category, subcategory).then(function(data){
+				$scope.listProducts = data;
+			});
 		}])
 
 })();
