@@ -33,7 +33,8 @@
           'categoryName' => $line['categoryName'],
           'subcategoryName' => $line['subcategoryName'],
           'idCategory' => $line['idCategory'],
-          'idSubcategory' => $line['idSubcategory']
+          'idSubcategory' => $line['idSubcategory'],
+          'productUrl' => $line['productUrl']
         );
       }
       print_r(json_encode($listProduct));
@@ -45,7 +46,8 @@
       while($line = mysql_fetch_array($result)){
         $listCategory[] = array(
           'idCategory' => $line['idCategory'],
-          'categoryName' => $line['categoryName']
+          'categoryName' => $line['categoryName'],
+          'categoryUrl' => $line['categoryUrl']
         );
       }
       print_r(json_encode($listCategory));
@@ -63,7 +65,8 @@
           'subcategoryName' => $line['subcategoryName'],
           'subcategoryImage' => $line['subcategoryImage'],
           'subcategoryDescription' => $line['subcategoryDescription'],
-          'categoryName' => $line['categoryName']
+          'categoryName' => $line['categoryName'],
+          'subcategoryUrl' => $line['subcategoryUrl']
         );
       }
       print_r(json_encode($listSubCategory));

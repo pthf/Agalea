@@ -5,6 +5,7 @@
     	'agaleaSite.controllers',
     	'agaleaSite.directives',
 			'agaleaSite.services',
+			'agaleaSite.filters',
 			'ngMap'
   	]);
 
@@ -16,7 +17,6 @@
 	})
 
 	app.config(['$routeProvider', function ($routeProvider) {
-
 		$routeProvider
 			.when('/', {
 				templateUrl: 'views/home.html',
@@ -25,14 +25,14 @@
 			.when('/nosotros', {
 				templateUrl: 'views/nosotros.html',
 			})
+			.when('/productos/:categoria/:subcategoria', {
+				templateUrl: 'views/product-view-item.html',
+			})
 			.when('/productos/:categoria', {
 				templateUrl: 'views/productos.html',
 			})
-			.when('/productos/', {
+			.when('/productos', {
 				templateUrl: 'views/productos.html',
-			})
-			.when('/item', {
-				templateUrl: 'views/product-view-item.html',
 			})
 			.when('/tips', {
 				templateUrl: 'views/tips.html',
@@ -43,7 +43,6 @@
 			.otherwise({
 				redirectTo: '/'
 			});
-
 	}]);
 
 })();

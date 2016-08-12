@@ -1,7 +1,5 @@
 <div class="menu-products">
   <ul>
-      <li><a class="selectedFilter" href="#/productos/womens">MUJERES</a></li>
-      <li><a href="#/productos/mens">HOMBRES</a></li>
-      <li><a href="#/productos/kids">NIÑOS</a></li>
+      <li ng-repeat="(key, data) in listCategoryProducts" ><a href="#/productos/{{data.categoryUrl}}">{{data.categoryName | uppercase}}</a></li>
   </ul>
 </div>

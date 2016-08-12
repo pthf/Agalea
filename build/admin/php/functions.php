@@ -8,6 +8,53 @@
       session_start();
       session_destroy();
     }
+    private function generateUrlString($string){
+      $string = trim($string);
+      $string = str_replace(
+          array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
+          array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
+          $string
+      );
+      $string = str_replace(
+          array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
+          array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
+          $string
+      );
+      $string = str_replace(
+          array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
+          array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
+          $string
+      );
+      $string = str_replace(
+          array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
+          array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
+          $string
+      );
+      $string = str_replace(
+          array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
+          array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
+          $string
+      );
+      $string = str_replace(
+          array('ñ', 'Ñ', 'ç', 'Ç'),
+          array('n', 'N', 'c', 'C'),
+          $string
+      );
+      //Esta parte se encarga de eliminar cualquier caracter extraño
+      $string = str_replace(
+          array('¨', 'º', '-', '~',
+               '#', '@', '|', '!', '"',
+               "·", "$", "%", "&", "/",
+               "(", ")", "?", "'", "¡",
+               "¿", "[", "^", "<code>", "]",
+               "+", "}", "{", "¨", "´",
+               ">", "<", ";", ",", ":",
+               "."),
+          '',
+          $string
+      );
+      return $string;
+    }
     private function getNameImage($dataFiles, $key){
       $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       $charactersLength = strlen($characters);
@@ -43,12 +90,18 @@
     }
     private function addNewProduct(){
       parse_str($_POST['data'], $data);
+
+      $nameUrl = $this->generateUrlString(mb_strtolower($data['productName']));
+      $nameUrl = explode(' ', $nameUrl);
+      $nameUrlAux = array_filter($nameUrl);
+      $nameUrl = implode('-', $nameUrlAux);
+
       foreach ($_FILES['setImage']["name"] as $key => $value) {
           $fileName = $this->getNameImage($_FILES, $key);
           $fileType = $_FILES["setImage"]["type"][$key];
           $fileTemp = $_FILES["setImage"]["tmp_name"][$key];
           move_uploaded_file($fileTemp, "../src/images/products/".$fileName);
-          $query = "INSERT INTO  product (productName, productImage, idSubcategory, idCategory) VALUES ('".$data['productName']."','".$fileName."', ".$data['productSubCategory'].", ".$data['productCategory'].")";
+          $query = "INSERT INTO  product (productName, productImage, productUrl, idSubcategory, idCategory) VALUES ('".$data['productName']."','".$fileName."', ".$data['productSubCategory'].", '".$nameUrl."', ".$data['productCategory'].")";
           $result = mysql_query($query, $this->connection()) or die(mysql_error());
         }
     }
@@ -64,7 +117,13 @@
     }
     private function modifyProduct(){
       parse_str($_POST['data'], $data);
-      $query = "UPDATE product SET productName = '".$data['productName']."', idSubcategory = ".$data['productSubCategory'].", idCategory = ".$data['productCategory']." WHERE idProduct =  ".$data['productId'];
+
+      $nameUrl = $this->generateUrlString(mb_strtolower($data['productName']));
+      $nameUrl = explode(' ', $nameUrl);
+      $nameUrlAux = array_filter($nameUrl);
+      $nameUrl = implode('-', $nameUrlAux);
+
+      $query = "UPDATE product SET productName = '".$data['productName']."', productUrl = '".$nameUrl."', idSubcategory = ".$data['productSubCategory'].", idCategory = ".$data['productCategory']." WHERE idProduct =  ".$data['productId'];
       $result = mysql_query($query, $this->connection()) or die(mysql_error());
     }
     private function modifyProductImage(){
@@ -85,8 +144,14 @@
     }
     private function addCategory(){
       parse_str($_POST['data'], $data);
+
+      $nameUrl = $this->generateUrlString(mb_strtolower ($data['categoryName']));
+      $nameUrl = explode(' ', $nameUrl);
+      $nameUrlAux = array_filter($nameUrl);
+      $nameUrl = implode('-', $nameUrlAux);
+
       $categoryName = $data['categoryName'];
-      $query = "INSERT INTO category (categoryName) VALUES ('".$categoryName."')";
+      $query = "INSERT INTO category (categoryName, categoryUrl) VALUES ('".$categoryName."', '".$nameUrl."')";
       $result = mysql_query($query, $this->connection()) or die(mysql_error());
     }
     private function removeCategory(){
@@ -96,12 +161,18 @@
     }
     private function addSubcategory(){
       parse_str($_POST['data'], $data);
+
+      $nameUrl = $this->generateUrlString(mb_strtolower($data['subcategoryName']));
+      $nameUrl = explode(' ', $nameUrl);
+      $nameUrlAux = array_filter($nameUrl);
+      $nameUrl = implode('-', $nameUrlAux);
+
       foreach ($_FILES['setImage']["name"] as $key => $value) {
           $fileName = $this->getNameImage($_FILES, $key);
           $fileType = $_FILES["setImage"]["type"][$key];
           $fileTemp = $_FILES["setImage"]["tmp_name"][$key];
           move_uploaded_file($fileTemp, "../src/images/products/subcategory/".$fileName);
-          $query = "INSERT INTO subcategory (subcategoryName, subcategoryImage, subcategoryDescription, idCategory) VALUES ('".$data['subcategoryName']."','".$fileName."', '".$data['subcategoryDescription']."', ".$data['subCategoryCategory'].")";
+          $query = "INSERT INTO subcategory (subcategoryName, subcategoryImage, subcategoryDescription, subcategoryUrl, idCategory) VALUES ('".$data['subcategoryName']."','".$fileName."', '".$data['subcategoryDescription']."','".$nameUrl."' , ".$data['subCategoryCategory'].")";
           $result = mysql_query($query, $this->connection()) or die(mysql_error());
         }
     }
@@ -117,7 +188,13 @@
     }
     private function modifySubcategory(){
       parse_str($_POST['data'], $data);
-      $query = "UPDATE subcategory SET subcategoryName = '".$data['subcategoryName']."', subcategoryDescription = '".$data['subcategoryDescription']."', idCategory = ".$data['subCategoryCategory']." WHERE idSubcategory =  ".$data['subcategoryId'];
+
+      $nameUrl = $this->generateUrlString(mb_strtolower($data['categoryName']));
+      $nameUrl = explode(' ', $nameUrl);
+      $nameUrlAux = array_filter($nameUrl);
+      $nameUrl = implode('-', $nameUrlAux);
+
+      $query = "UPDATE subcategory SET subcategoryName = '".$data['subcategoryName']."', subcategoryDescription = '".$data['subcategoryDescription']."', subcategoryUrl = '".$nameUrl."', idCategory = ".$data['subCategoryCategory']." WHERE idSubcategory =  ".$data['subcategoryId'];
       $result = mysql_query($query, $this->connection()) or die(mysql_error());
     }
     private function modifySubcategoryImage(){

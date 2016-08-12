@@ -1,52 +1,11 @@
 <!-- Grid Products -->
 <div class="grid-boxes">
   <ul class="grid-wrapper">
-
-    <!-- primera fila -->
-    <li class="box-flex standard-box" onclick="location.href='#/item';">
-      <img src="img/photo-1-01.png" >
+    <li class="box-flex standard-box" href='#/productos/{{data.categoryUrl}}/{{data.subcategoryUrl}}' ng-repeat = "(key, data) in listSubcategoryHome">
+      <img src="./admin/src/images/products/subcategory/{{data.subcategoryImage}}" >
       <div class="title-box">
-        <span class="title-box-info">MUJER</span>
+        <span class="title-box-info">{{data.subcategoryName | uppercase}} # {{data.categoryName | uppercase}}</span>
       </div>
     </li>
-
-    <li class="box-flex standard-box" onclick="location.href='#/item';">
-      <img src="img/photo-3-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">MUJER</span>
-      </div>
-    </li>
-
-    <li class="box-flex standard-box" onclick="location.href='#/item';">
-      <img src="img/photo-2-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">MUJER</span>
-      </div>
-    </li>
-
-    <!-- segunda fila -->
-    <li class="box-flex standard-box" onclick="location.href='#/item';">
-      <img src="img/photo-2-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">MUJER</span>
-      </div>
-    </li>
-
-    <li class="box-flex standard-box" onclick="location.href='#/item';">
-      <img src="img/photo-1-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">MUJER</span>
-      </div>
-    </li>
-
-    <!-- tercera fila -->
-    <li class="box-flex standard-box" onclick="location.href='#/item';">
-      <img src="img/photo-4-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">MUJER</span>
-      </div>
-    </li>
-
-
   </ul>
 </div>

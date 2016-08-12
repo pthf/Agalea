@@ -89,6 +89,26 @@
 				templateUrl: './partials/grid-boxes.html',
 				controller: function($document){
 
+					$(document).on('click', 'li.standard-box', function(){
+						var url = $(this).attr('href');
+						window.location.href = url;
+					});
+
+				}
+			};
+		})
+
+		.directive('gridBoxesFilters', function(){
+			return {
+				restrict: 'E',
+				templateUrl: './partials/grid-boxes-filters.html',
+				controller: function($document){
+
+					$(document).on('click', 'li.standard-box', function(){
+						var url = $(this).attr('href');
+						window.location.href = url;
+					});
+
 				}
 			};
 		})
