@@ -4,6 +4,7 @@
       <tr>
         <th>#</th>
         <th>name</th>
+        <th>description</th>
         <th>image</th>
         <th>category</th>
         <th>subcategory</th>
@@ -14,6 +15,7 @@
       <tr ng-repeat="(key, data) in listProduct">
         <th>{{data.idProduct}}</th>
         <th>{{data.productName}}</th>
+        <th>{{data.productDescription}}</th>
         <th>
           <div style="width: 90px; height: 60px; overflow: hidden;">
             <img src="../src/images/products/{{data.productImage}}" width="100%;" height="auto;">
@@ -35,6 +37,10 @@
         <label for="productName" class="col-sm-12 control-label" style="text-align: left;">Insert a product name *</label>
         <div class="col-sm-12">
           <input required type="text" class="form-control" id="productName" name="productName"></input>
+        </div>
+        <label for="productDescription" class="col-sm-12 control-label" style="text-align: left;">Insert a product description *</label>
+        <div class="col-sm-12">
+          <textarea required type="text" class="form-control" id="productDescription" name="productDescription"></textarea>
         </div>
         <label for="setImage" class="col-sm-12 control-label" style="text-align: left;">Insert a product image *</label>
         <div class="col-sm-12">

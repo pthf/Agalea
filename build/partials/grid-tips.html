@@ -2,56 +2,15 @@
 
 <!-- Grid Products -->
 <div class="grid-boxes">
+
   <ul class="grid-wrapper">
-
-    <!-- primera fila -->
-    <li class="box-flex double-box">
-      <img src="img/photo-1-01.png" >
+    <!-- double-box,double-box, standard-box, triple-box, triple-box, triple-box -->
+    <li class="box-flex" ng-repeat="(key, data) in listTips" ng-click="loadDetailsInfo(data.idBlogtip)">
+      <img src="{{data.blogtipImage}}" >
       <div class="title-box">
-        <span class="title-box-info">MUJER</span>
+        <span class="title-box-info">{{data.blogtipName | uppercase}}</span>
       </div>
     </li>
-
-    <li class="box-flex double-box">
-      <img src="img/photo-3-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">MUJER</span>
-      </div>
-    </li>
-
-    <!-- segunda fila -->
-    <li class="box-flex tip-box standard-box">
-      <img src="img/photo-8-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">COLLARES</span>
-      </div>
-    </li>
-
-    <!-- tercer fila -->
-    <li class="box-flex triple-box">
-      <img src="img/photo-1-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">COLLARES</span>
-      </div>
-    </li>
-
-    <li class="box-flex triple-box">
-      <img src="img/photo-1-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">COLLARES</span>
-      </div>
-    </li>
-
-
-    <li class="box-flex triple-box">
-      <img src="img/photo-1-01.png" >
-      <div class="title-box">
-        <span class="title-box-info">COLLARES</span>
-      </div>
-    </li>
-
-
-
-
   </ul>
+
 </div>

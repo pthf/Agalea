@@ -12,6 +12,10 @@
         <div class="col-sm-12">
           <input required type="text" class="form-control" id="productName" name="productName" value="{{productDetails.productName}}"></input>
         </div>
+        <label for="productDescription" class="col-sm-12 control-label" style="text-align: left;">Product description *</label>
+        <div class="col-sm-12">
+          <textarea required type="text" class="form-control" id="productDescription" name="productDescription">{{productDetails.productDescription}}</textarea>
+        </div>
         <label for="productCategory" class="col-sm-12 control-label" style="text-align: left;">Product category</label>
         <div class="col-sm-12">
           <select name="productCategory" id="productCategory" ng-model="categorySelected" class="form-control" required>

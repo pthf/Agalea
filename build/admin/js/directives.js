@@ -192,7 +192,6 @@
 						processData: false,  // tell jQuery not to process the data
 						contentType: false,   // tell jQuery not to set contentType
 						success: function(result){
-							alert(result);
 							$('.clickUpdate').trigger('click');
 						},
 						error: function(error){
@@ -362,7 +361,6 @@
 						processData: false,  // tell jQuery not to process the data
 						contentType: false,   // tell jQuery not to set contentType
 						success: function(result){
-							alert(result);
 							$('.clickUpdate').trigger('click');
 						},
 						error: function(error){

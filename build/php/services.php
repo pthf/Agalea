@@ -79,11 +79,28 @@
         $listProducts[] = array(
           'idProduct' => $line['idProduct'],
           'productName' => $line['productName'],
+          'productDescription' => $line['productDescription'],
           'productImage' => $line['productImage'],
-          'subcategoryDescription' => $line['subcategoryDescription']
+          'subcategoryDescription' => $line['subcategoryDescription'],
+          'subcategoryName' => $line['subcategoryName']
         );
       }
       print_r(json_encode($listProducts));
+    }
+    private function getTipsBlog(){
+      $query = "SELECT * FROM blogtip ORDER BY idBlogtip";
+      $result = mysql_query($query, $this->connection());
+      $listTips = array();
+      while($line = mysql_fetch_array($result)){
+        $listTips[] = array(
+          'idBlogtip' => $line['idBlogtip'],
+          'blogtipName' => $line['blogtipName'],
+          'blogtipDate' => $line['blogtipDate'],
+          'blogtipImage' => $line['blogtipImage'],
+          'blogtipNote' => $line['blogtipNote']
+        );
+      }
+      print_r(json_encode($listTips));
     }
   }
   $nameObject = $_GET['namefunction'];

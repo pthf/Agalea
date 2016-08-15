@@ -174,8 +174,8 @@
 				restrict: 'E',
 				templateUrl: './partials/grid-tips.html',
 				controller: function($document){
-					$( 'li.box-flex' ).click(function() {
-					  $('.background-blur').css('z-index','9');
+					$(document).on('click', 'li.box-flex', function(){
+				  	$('.background-blur').css('z-index','9');
 						$('html').css('overflow','hidden');
 						if ($(window).width() <= 768) {
 	             $('html,body').css({
@@ -212,20 +212,22 @@
 			};
 		})
 
-			//Vista de un solo producto
+		//Vista de un solo producto
 		.directive('productItem', function(){
 			return {
 				restrict: 'E',
 				templateUrl: './partials/product-item.html',
 				controller: function($document){
-					var mySwiper = new Swiper('.swiper-item',{
-	          pagination: '.pagination-item',
-	          loop:true,
-	          grabCursor: false,
-	          paginationClickable: true,
-	          autoplay:false,
-	          // speed:500
-	        });
+					setTimeout(function(){
+						var mySwiper = new Swiper('.swiper-item',{
+		          pagination: '.pagination-item',
+		          loop:true,
+		          grabCursor: false,
+		          paginationClickable: true,
+		          autoplay:false,
+		          // speed:500
+		        });
+					},80);
 				}
 			};
 		})

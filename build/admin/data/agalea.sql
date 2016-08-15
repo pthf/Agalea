@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-08-2016 a las 12:51:26
+-- Tiempo de generación: 15-08-2016 a las 14:16:46
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `adminuser` (
 --
 
 INSERT INTO `adminuser` (`idAdmin`, `adminName`, `adminPassword`, `adminLastConnection`) VALUES
-(0, 'admin', '$2y$10$yavwPc4idejZo0c2fV0gFOPX8QdGd1YogRnRWYYEPhBGyIbzvV6B2', '2016-08-04 11:55:12');
+(0, 'admin', '$2y$10$yavwPc4idejZo0c2fV0gFOPX8QdGd1YogRnRWYYEPhBGyIbzvV6B2', '2016-08-12 12:51:33');
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,8 @@ CREATE TABLE IF NOT EXISTS `blogtip` (
 --
 
 INSERT INTO `blogtip` (`idBlogtip`, `blogtipName`, `blogtipDate`, `blogtipImage`, `blogtipNote`) VALUES
-(5, 'jemplo', '2016-08-11', 'http://localhost/www/Agalea/build/admin/src/images/document/20160810122301KCGVB4.jpg', '<p>Initial content</p>\r\n<p><a href="http://localhost/www/Agalea/build/admin/src/images/document/20160810122301FBXMJ0.jpg">http://localhost/www/Agalea/build/admin/src/images/document/20160810122301FBXMJ0.jpg</a></p>\r\n<p>&nbsp;<img src="http://localhost/www/Agalea/build/admin/src/images/document/20160810122301KCGVB4.jpg" alt="" width="274" height="395" /></p>\r\n<p>&nbsp;</p>\r\n<p>http://localhost/www/Agalea/build/admin/src/images/document/20160810122301FBXMJ0.jpg</p>');
+(4, 'tip number three', '2016-08-15', 'http://localhost/www/Agalea/build/admin/src/images/document/20160815113549IEM4PY.jpg', '<p>&nbsp;</p>\r\n<div>\r\n<p>Lorem Ipsum&nbsp;es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est&aacute;ndar de las industrias desde el a&ntilde;o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us&oacute; una galer&iacute;a de textos y los mezcl&oacute; de tal manera que logr&oacute; hacer un libro de textos especimen. No s&oacute;lo sobrevivi&oacute; 500 a&ntilde;os, sino que tambien ingres&oacute; como texto de relleno en documentos electr&oacute;nicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creaci&oacute;n de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y m&aacute;s recientemente con software de autoedici&oacute;n, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>\r\n<p>&nbsp;</p>\r\n<p>Lorem Ipsum&nbsp;es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est&aacute;ndar de las industrias desde el a&ntilde;o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us&oacute; una galer&iacute;a de textos y los mezcl&oacute; de tal manera que logr&oacute; hacer un libro de textos especimen. No s&oacute;lo sobrevivi&oacute; 500 a&ntilde;os, sino que tambien ingres&oacute; como texto de relleno en documentos electr&oacute;nicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creaci&oacute;n de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y m&aacute;s recientemente con software de autoedici&oacute;n, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>\r\n<p style="text-align: center;"><img src="http://localhost/www/Agalea/build/admin/src/images/document/20160815113549IEM4PY.jpg" alt="" width="50%" height="NaN" />&nbsp;</p>\r\n<p>Lorem Ipsum&nbsp;es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est&aacute;ndar de las industrias desde el a&ntilde;o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us&oacute; una galer&iacute;a de textos y los mezcl&oacute; de tal manera que logr&oacute; hacer un libro de textos especimen. No s&oacute;lo sobrevivi&oacute; 500 a&ntilde;os, sino que tambien ingres&oacute; como texto de relleno en documentos electr&oacute;nicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creaci&oacute;n de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y m&aacute;s recientemente con software de autoedici&oacute;n, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>\r\n<p>&nbsp;</p>\r\n<p>Lorem Ipsum&nbsp;es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est&aacute;ndar de las industrias desde el a&ntilde;o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us&oacute; una galer&iacute;a de textos y los mezcl&oacute; de tal manera que logr&oacute; hacer un libro de textos especimen. No s&oacute;lo sobrevivi&oacute; 500 a&ntilde;os, sino que tambien ingres&oacute; como texto de relleno en documentos electr&oacute;nicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creaci&oacute;n de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y m&aacute;s recientemente con software de autoedici&oacute;n, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>'),
+(5, 'tip # 4', '2016-08-15', 'http://localhost/www/Agalea/build/admin/src/images/document/20160815113549KIFRKX.jpg', '<p style="text-align: center;"><a href="http://localhost/www/Agalea/build/admin/src/images/document/20160815113549KIFRKX.jpg">http://localhost/www/Agalea/build/admin/src/images/document/20160815113549KIFRKX.jpg</a></p>\r\n<p style="text-align: center;"><img src="http://localhost/www/Agalea/build/admin/src/images/document/20160815113549KIFRKX.jpg" alt="" width="80%" height="NaN" /></p>\r\n<p style="text-align: center;">&nbsp;</p>');
 
 -- --------------------------------------------------------
 
@@ -69,15 +70,19 @@ INSERT INTO `blogtip` (`idBlogtip`, `blogtipName`, `blogtipDate`, `blogtipImage`
 
 CREATE TABLE IF NOT EXISTS `category` (
   `idCategory` int(11) NOT NULL,
-  `categoryName` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `categoryName` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `categoryUrl` varchar(450) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `category`
 --
 
-INSERT INTO `category` (`idCategory`, `categoryName`) VALUES
-(1, 'Mem');
+INSERT INTO `category` (`idCategory`, `categoryName`, `categoryUrl`) VALUES
+(34, 'Hombres', 'hombres'),
+(35, 'Niños', 'ninos'),
+(36, 'Mujeres', 'mujeres'),
+(37, 'Fin de temporada', 'fin-de-temporada');
 
 -- --------------------------------------------------------
 
@@ -90,16 +95,17 @@ CREATE TABLE IF NOT EXISTS `homebanner` (
   `bannerName` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `bannerUrl` varchar(145) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `bannerImageName` varchar(245) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `homebanner`
 --
 
 INSERT INTO `homebanner` (`idHomeBanner`, `bannerName`, `bannerUrl`, `bannerImageName`) VALUES
-(1, 'locasl', 'http://localhost/www/Agalea/build/admin/panel/index.php#/home-slider', '20160811125016SKAQJ1.jpg'),
-(2, 'locasl', 'http://localhost/www/Agalea/build/admin/panel/index.php#/home-slider', '20160811125016F21CFY.jpg'),
-(3, 'locasl', 'http://localhost/www/Agalea/build/admin/panel/index.php#/home-slider', '20160811125016GCC0KC.jpg');
+(8, 'http://localhost/www/Agalea/build/#/', 'http://localhost/www/Agalea/build/#/', '20160812182348JM8KPC.jpg'),
+(9, 'http://localhost/www/Agalea/build/#/', 'http://localhost/www/Agalea/build/#/', '20160812182354DF5YDL.jpg'),
+(10, 'http://localhost/www/Agalea/build/#/', 'http://localhost/www/Agalea/build/#/', '20160812182403F6KJN8.jpg'),
+(11, 'http://localhost/www/Agalea/build/#/', 'http://localhost/www/Agalea/build/#/', '20160812182406U8FTI5.jpg');
 
 -- --------------------------------------------------------
 
@@ -110,15 +116,17 @@ INSERT INTO `homebanner` (`idHomeBanner`, `bannerName`, `bannerUrl`, `bannerImag
 CREATE TABLE IF NOT EXISTS `imageslibrary` (
   `idImage` int(11) NOT NULL,
   `nameImage` varchar(245) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=ascii;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=ascii;
 
 --
 -- Volcado de datos para la tabla `imageslibrary`
 --
 
 INSERT INTO `imageslibrary` (`idImage`, `nameImage`) VALUES
-(10, '20160810122301KCGVB4.jpg'),
-(11, '20160810122301FBXMJ0.jpg');
+(13, '20160815113548C2KIXP.jpg'),
+(14, '20160815113549Z31541.jpg'),
+(15, '20160815113549IEM4PY.jpg'),
+(16, '20160815113549KIFRKX.jpg');
 
 -- --------------------------------------------------------
 
@@ -129,17 +137,27 @@ INSERT INTO `imageslibrary` (`idImage`, `nameImage`) VALUES
 CREATE TABLE IF NOT EXISTS `product` (
   `idProduct` int(11) NOT NULL,
   `productName` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `productDescription` varchar(1024) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `productImage` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `productUrl` varchar(248) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `idSubcategory` int(11) NOT NULL,
   `idCategory` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `product`
 --
 
-INSERT INTO `product` (`idProduct`, `productName`, `productImage`, `idSubcategory`, `idCategory`) VALUES
-(1, 'http://localhost/www/Agalea/build/admin/panel', '20160811125048HEYH58.jpg', 1, 1);
+INSERT INTO `product` (`idProduct`, `productName`, `productDescription`, `productImage`, `productUrl`, `idSubcategory`, `idCategory`) VALUES
+(1, 'product', 'productDescription	\r\n', '201608150947057PTS01.jpg', 'product', 39, 37),
+(2, 'product 2', 'productDescription	\r\n', '20160815094711FE285H.jpg', 'product-2', 39, 37),
+(3, 'product 3', 'productDescription	\r\n', '201608150947145TLBMD.jpg', 'product-3', 39, 37),
+(4, 'product 4', 'productDescription	\r\n', '201608151103297VV027.jpg', 'product-4', 39, 37),
+(5, 'product 5', 'productDescription	\r\n', '20160815094730HAEG1A.jpg', 'product-5', 35, 37),
+(6, 'product 6', 'productDescription	\r\n', '20160815094736VPXYBD.jpg', 'product-6', 35, 37),
+(7, 'product 7', 'productDescription	\r\n', '20160815094742YW963E.jpg', 'product-7', 35, 37),
+(8, 'product 8', 'productDescription	\r\n', '20160815094748FUI1NH.jpg', 'product-8', 35, 37),
+(13, 'productDescription	', 'productDescription	\r\n', '20160815103510TIRI3O.jpg', 'productdescription', 40, 37);
 
 -- --------------------------------------------------------
 
@@ -151,16 +169,30 @@ CREATE TABLE IF NOT EXISTS `subcategory` (
   `idSubcategory` int(11) NOT NULL,
   `subcategoryName` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `subcategoryImage` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `subcategoryDescription` varchar(245) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `subcategoryDescription` varchar(1045) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `subcategoryUrl` varchar(248) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `idCategory` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `subcategory`
 --
 
-INSERT INTO `subcategory` (`idSubcategory`, `subcategoryName`, `subcategoryImage`, `subcategoryDescription`, `idCategory`) VALUES
-(1, 'mem', '201608111250393ZWKBG.jpg', 'http://localhost/www/Agalea/build/admin/panel/index.php#/home-slider', 1);
+INSERT INTO `subcategory` (`idSubcategory`, `subcategoryName`, `subcategoryImage`, `subcategoryDescription`, `subcategoryUrl`, `idCategory`) VALUES
+(27, 'Relojes', '20160812181636THCIS4.jpg', 'Relojes', 'relojes', 37),
+(28, 'Relojes', '20160812181640KLS57V.jpg', 'Relojes', 'relojes', 36),
+(29, 'Relojes', '20160812181644KGIM8R.jpg', 'Relojes', 'relojes', 35),
+(30, 'Relojes', '20160812181649OG1S29.jpg', 'Relojes', 'relojes', 34),
+(31, 'Anillos', '20160812181702BSDTXV.jpg', 'Anillos', 'anillos', 37),
+(32, 'Anillos', '20160812181706ZLPTL4.jpg', 'Anillos', 'anillos', 36),
+(33, 'Anillos', '20160812181722BGEG51.jpg', 'Anillos', 'anillos', 35),
+(34, 'Anillos', '20160812181726B7VVTH.jpg', 'Anillos', 'anillos', 34),
+(35, 'Collares', '20160812181956V945SV.jpg', 'Anillos', 'collares', 37),
+(36, 'Collares', '20160812182000FC6BFR.jpg', 'Anillos', 'collares', 36),
+(37, 'Collares', '20160812182004OS05U4.jpg', 'Anillos', 'collares', 35),
+(38, 'Collares', '20160812182008Q61SQ3.jpg', 'Anillos', 'collares', 34),
+(39, 'Gold', '201608121820296GZG0K.jpg', 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.', 'gold', 37),
+(40, 'Muestra', '20160815101322BT257L.jpg', 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.	', 'muestra', 37);
 
 --
 -- Índices para tablas volcadas
@@ -217,27 +249,27 @@ ALTER TABLE `blogtip`
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `idCategory` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idCategory` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT de la tabla `homebanner`
 --
 ALTER TABLE `homebanner`
-  MODIFY `idHomeBanner` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `idHomeBanner` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `imageslibrary`
 --
 ALTER TABLE `imageslibrary`
-  MODIFY `idImage` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `idImage` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
-  MODIFY `idProduct` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idProduct` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `subcategory`
 --
 ALTER TABLE `subcategory`
-  MODIFY `idSubcategory` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idSubcategory` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
 --
 -- Restricciones para tablas volcadas
 --

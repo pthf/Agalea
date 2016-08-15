@@ -34,7 +34,8 @@
           'subcategoryName' => $line['subcategoryName'],
           'idCategory' => $line['idCategory'],
           'idSubcategory' => $line['idSubcategory'],
-          'productUrl' => $line['productUrl']
+          'productUrl' => $line['productUrl'],
+          'productDescription' => $line['productDescription']
         );
       }
       print_r(json_encode($listProduct));

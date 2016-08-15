@@ -67,4 +67,19 @@
 			});
 		}])
 
+		.controller('showBlogTipsController', ['$scope', 'agaleaService', '$sce', function($scope, agaleaService, $sce){
+			$scope.trustAsHtml = function(html) {
+				return $sce.trustAsHtml(html);
+			};
+			$scope.detailInfo = [];
+			agaleaService.getTipsBlog().then(function(data){
+				$scope.listTips = data;
+			});
+			$scope.loadDetailsInfo = function(idBlogtip){
+				agaleaService.getDetailTip(idBlogtip).then(function(data){
+					$scope.detailInfo = data;
+				});
+			};
+		}])
+
 })();

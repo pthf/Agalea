@@ -101,8 +101,10 @@
           $fileType = $_FILES["setImage"]["type"][$key];
           $fileTemp = $_FILES["setImage"]["tmp_name"][$key];
           move_uploaded_file($fileTemp, "../src/images/products/".$fileName);
-          $query = "INSERT INTO  product (productName, productImage, productUrl, idSubcategory, idCategory) VALUES ('".$data['productName']."','".$fileName."', ".$data['productSubCategory'].", '".$nameUrl."', ".$data['productCategory'].")";
+          $query = "INSERT INTO  product (productName, productDescription, productImage, productUrl, idSubcategory, idCategory) VALUES ('".$data['productName']."', '".$data['productDescription']."', '".$fileName."', '".$nameUrl."', ".$data['productSubCategory'].", ".$data['productCategory'].")";
           $result = mysql_query($query, $this->connection()) or die(mysql_error());
+
+          echo $data['productDescription'];
         }
     }
     private function removeProduct(){
@@ -123,7 +125,7 @@
       $nameUrlAux = array_filter($nameUrl);
       $nameUrl = implode('-', $nameUrlAux);
 
-      $query = "UPDATE product SET productName = '".$data['productName']."', productUrl = '".$nameUrl."', idSubcategory = ".$data['productSubCategory'].", idCategory = ".$data['productCategory']." WHERE idProduct =  ".$data['productId'];
+      $query = "UPDATE product SET productName = '".$data['productName']."', productUrl = '".$nameUrl."', idSubcategory = ".$data['productSubCategory'].", productDescription = '".$data['productDescription']."' ,idCategory = ".$data['productCategory']." WHERE idProduct =  ".$data['productId'];
       $result = mysql_query($query, $this->connection()) or die(mysql_error());
     }
     private function modifyProductImage(){
@@ -189,7 +191,7 @@
     private function modifySubcategory(){
       parse_str($_POST['data'], $data);
 
-      $nameUrl = $this->generateUrlString(mb_strtolower($data['categoryName']));
+      $nameUrl = $this->generateUrlString(mb_strtolower($data['subcategoryName']));
       $nameUrl = explode(' ', $nameUrl);
       $nameUrlAux = array_filter($nameUrl);
       $nameUrl = implode('-', $nameUrlAux);

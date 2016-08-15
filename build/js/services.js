@@ -56,13 +56,41 @@
         });
         return deferred.promise;
     }
+
+    function getTipsBlog(){
+      var deferred = $q.defer();
+      $http.get('./php/services.php?namefunction=getTipsBlog')
+        .success(function (data) {
+            deferred.resolve(data);
+        });
+        return deferred.promise;
+    }
+
+    function getDetailTip(idBlogtip){
+      var deferred = $q.defer();
+      getTipsBlog().then(function(data){
+        var result = data.filter(function(item){
+          return item.idBlogtip === idBlogtip;
+        });
+        if(result.length > 0 ){
+          deferred.resolve(result[0]);
+        } else {
+          deferred.reject();
+        }
+      });
+      return deferred.promise;
+    }
+
+
     return {
       getImagesSliderHome: getImagesSliderHome,
       getSubcategoriesHome: getSubcategoriesHome,
       getCategoriesProducts: getCategoriesProducts,
       getByCategory: getByCategory,
       getAllCategories: getAllCategories,
-      getProductsByFilters: getProductsByFilters
+      getProductsByFilters: getProductsByFilters,
+      getTipsBlog: getTipsBlog,
+      getDetailTip: getDetailTip
     }
 
   }]);
