@@ -4,7 +4,7 @@
     <li class="box-flex standard-box" href='#/productos/{{data.categoryUrl}}/{{data.subcategoryUrl}}' ng-repeat = "(key, data) in listCategories">
       <img src="./admin/src/images/products/subcategory/{{data.subcategoryImage}}" >
       <div class="title-box">
-        <span class="title-box-info">{{data.subcategoryName | uppercase}} # {{data.categoryName | uppercase}}</span>
+        <span class="title-box-info">{{data.subcategoryName | uppercase}} / {{data.categoryName | uppercase}}</span>
       </div>
     </li>
   </ul>

@@ -1,5 +1,5 @@
-<div class="menu-products">
+<div class="menu-products" ng-controller="itemSelectedCheckController">
   <ul>
-      <li ng-repeat="(key, data) in listCategoryProducts" ><a href="#/productos/{{data.categoryUrl}}">{{data.categoryName | uppercase}}</a></li>
+    <li ng-repeat="(key, data) in listCategoryProducts" ><a ng-class="{'selectedFilter':itemSelected === data.categoryUrl }" href="#/productos/{{data.categoryUrl}}">{{data.categoryName | uppercase}}</a></li>
   </ul>
 </div>

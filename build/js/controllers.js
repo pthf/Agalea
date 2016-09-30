@@ -2,10 +2,35 @@
 
 	angular.module('agaleaSite.controllers', [])
 
+		.controller('itemSelectedCheckController', ['$scope', '$routeParams', function($scope, $routeParams){
+			$scope.itemSelected = $routeParams.categoria;
+		}])
+
 		.controller('homeSliderController', ['$scope', function($scope){
 				$('.logo-header svg').on('click', function(){
 					$('li.menu-item a').removeClass('selected');
 				})
+		}])
+
+		.controller('swiperProductController', ['$scope', function($scope){
+			setTimeout(function(){
+				var mySwiper = new Swiper('.swiper-item',{
+					pagination: '.pagination-item',
+					loop:true,
+					grabCursor: false,
+					paginationClickable: true,
+					nextButton: '.swiper-button-next',
+					prevButton: '.swiper-button-prev',
+					autoplay:false,
+					// speed:500
+				});
+				$('.swiper-button-next').on('click', function(e){
+		      mySwiper.swipePrev()
+		    })
+		    $('.swiper-button-prev').on('click', function(e){
+		      mySwiper.swipeNext()
+		    })
+			},150);
 		}])
 
 		.controller('itemSelectedController', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location ){
@@ -15,7 +40,7 @@
 	      case '/nosotros': $scope.itemselected = 1;  break;
 	      case '/productos': $scope.itemselected = 2;  break;
 	      case '/tips': $scope.itemselected = 3;  break;
-	      case '/contacto': $scope.itemselected = 4;  break;
+	      case '/ubicanos': $scope.itemselected = 4;  break;
 			}
 			$scope.changerute = function(item){
 				$scope.itemselected = item;

@@ -31,14 +31,14 @@
 	      templateUrl: './partials/swiper-slider.html',
 				controller: function($document){
 					setTimeout(function(){
-						var mySwiper = new Swiper('.swiper-home',{
+						var mySwiper3 = new Swiper('.swiper-home',{
 							pagination: '.pagination-home',
 							loop:true,
 							grabCursor: false,
 							paginationClickable: true,
 							autoplay:false
 						});
-					},80);
+					},150);
 				}
 			};
 		})
@@ -49,14 +49,6 @@
 	      restrict: 'E',
 	      templateUrl: './partials/background-blur.html',
 				controller: function($document){
-					var mySwiper2 = new Swiper('.swiper-modal',{
-		        pagination: '.pagination-modal',
-		        loop:true,
-		        grabCursor: false,
-		        paginationClickable: true,
-		        autoplay:false,
-		        // speed:500
-		      });
 					$( 'span.close-icon-button,.close-filter' ).click(function() {
 					  $('.background-blur').css('opacity','0');
 						setTimeout(function(){
@@ -218,16 +210,30 @@
 				restrict: 'E',
 				templateUrl: './partials/product-item.html',
 				controller: function($document){
-					setTimeout(function(){
-						var mySwiper = new Swiper('.swiper-item',{
-		          pagination: '.pagination-item',
-		          loop:true,
-		          grabCursor: false,
-		          paginationClickable: true,
-		          autoplay:false,
-		          // speed:500
-		        });
-					},80);
+					$(document).ready(function(){
+						$('a.category-return').click(function(){
+							parent.history.back();
+							return false;
+						});
+					});
+				}
+			};
+		})
+
+		//Mapas
+		.directive('mapa', function(){
+			return {
+				restrict: 'E',
+				templateUrl: './partials/mapa.html',
+				controller: function($document){
+					$(document).ready(function(){
+						$('a.category-return').click(function(){
+							parent.history.back();
+							return false;
+						});
+
+	
+					});
 				}
 			};
 		})

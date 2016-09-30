@@ -23,22 +23,28 @@
 				controller: 'homeSliderController'
 			})
 			.when('/nosotros', {
-				templateUrl: 'views/nosotros.html',
+				templateUrl: 'views/nosotros.html'
 			})
 			.when('/productos/:categoria/:subcategoria', {
-				templateUrl: 'views/product-view-item.html',
+				templateUrl: 'views/product-view-item.html'
 			})
 			.when('/productos/:categoria', {
-				templateUrl: 'views/productos.html',
+				templateUrl: 'views/productos.html'
 			})
 			.when('/productos', {
-				templateUrl: 'views/productos.html',
+				templateUrl: 'views/productos.html'
 			})
 			.when('/tips', {
-				templateUrl: 'views/tips.html',
+				templateUrl: 'views/tips.html'
 			})
-			.when('/contacto', {
-				templateUrl: 'views/contacto.html',
+			.when('/ubicanos', {
+				templateUrl: 'views/contacto.html'
+			})
+			.when('/mapa', {
+				templateUrl: 'views/mapa.html'
+			})
+			.when('/mapa/:lugar', {
+				templateUrl: 'views/mapa.html'
 			})
 			.otherwise({
 				redirectTo: '/'

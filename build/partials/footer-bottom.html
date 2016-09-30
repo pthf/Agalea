@@ -57,14 +57,14 @@
       </a>
     </div>
 
-    <ul class="footer-list">
-
-      <a href="#/productos"><li class="footer-item">PRODUCTOS</li></a>
-      <a href="#/tips"><li class="footer-item">TIPS</li></a>
-      <a href="#/contacto"><li class="footer-item">CONTACTO</li></a>
+    <ul class="footer-list" ng-controller="itemSelectedController">
+      <a href="#/nosotros" ng-click="changerute(1)"><li class="footer-item" ng-class="{'selected': footer-selected === 1 }" >NOSOTROS</li></a>
+      <a href="#/productos" ng-click="changerute(2)"><li class="footer-item" ng-class="{'selected': footer-selected === 2 }" >PRODUCTOS</li></a>
+      <a href="#/tips" ng-click="changerute(3)"><li class="footer-item" ng-class="{'selected': footer-selected === 3 }" >TIPS</li></a>
+      <a href="#/ubicanos" ng-click="changerute(4)"><li class="footer-item" ng-class="{'selected': footer-selected === 4 }" >UBÍCANOS</li></a>
 
       <ul class="social-footer">
-        <a href="">
+        <a target="_blank" href="https://www.facebook.com/Ag%C3%A1lea-122274821195092/">
           <li class="social-item">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 6.6 14.3" style="enable-background:new 0 0 6.6 14.3;" xml:space="preserve">
@@ -78,7 +78,7 @@
           </li>
         </a>
 
-        <li class="social-item">
+        <!-- <li class="social-item">
           <a href="">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 16.2 14.3" style="enable-background:new 0 0 16.2 14.3;" xml:space="preserve">
@@ -101,7 +101,7 @@
               c2.4,0,4.4-2,4.4-4.4c0-0.4-0.1-0.8-0.2-1.1h1.3V11.4z"/>
             </svg>
           </a>
-        </li>
+        </li> -->
       </ul>
     </ul>
 
@@ -115,11 +115,9 @@
     </div>
 
     <ul class="footer-info">
-      <li>AV. DIRECCIÓN #2233</li>
-      <li>COL. REAL ACUEDUCTO</li>
-      <li>GUADALAJARA, JALISCO</li> <br>
       <li><a tel="33442255">Tel: 33 44 22 55</a></li> <br>
-      <li><a href="mailto:someone@example.com?Subject=Hola!" >CONTACTO@AGALEA.COM</a></li>
+      <li><a href="mailto:someone@example.com?Subject=Hola!" >CONTACTO@AGALEA.COM</a></li> <br>
+      <li><a target="_blank" href="./apagalea.pdf" style="color: #fff;text-decoration:none">Aviso de Privacidad</a></li>
     </ul>
   </div>
 
